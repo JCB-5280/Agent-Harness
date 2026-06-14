@@ -1,0 +1,19 @@
+{
+  "name": "agent-harness",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Role-based 24/7 Claude Code agent harness: web dashboard + DuckDB task bus + git-backed state for ephemeral container platforms",
+  "scripts": {
+    "start": "node server/index.js",
+    "init-db": "node scripts/init-db.js",
+    "seed": "node scripts/seed-task.js",
+    "status": "node scripts/status.js"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "^1.5.3-r.3",
+    "fastify": "^5.0.0",
+    "@fastify/static": "^9.0.0"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,16 @@
+# Local/dev runner. On your corp container platform, deploy the image with:
+#   - exactly ONE replica (single DB writer, single task claimer)
+#   - always-on (no scale-to-zero: the loop must stay alive between requests)
+#   - env from your secret manager: ANTHROPIC_API_KEY, GH_TOKEN, STATE_REPO
+services:
+  harness:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    ports:
+      - "8080:8080"             # dashboard + API; put corp SSO in front in prod
+    volumes:
+      - ./data:/app/data        # optional locally; in prod STATE_REPO is the durability
+      - ./workspace:/app/workspace
+    mem_limit: 4g
+    cpus: 2

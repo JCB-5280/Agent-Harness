@@ -1,0 +1,6 @@
+{
+  "permissionMode": "acceptEdits",
+  "maxTurns": 40,
+  "cwd": "workspace",
+  "allowedTools": ["Read", "Glob", "Grep", "Bash(git log:*)", "Bash(git diff:*)", "Bash(gh issue:*)", "Bash(gh pr list:*)", "Bash(node /app/scripts/agent-db.js:*)"]
+}

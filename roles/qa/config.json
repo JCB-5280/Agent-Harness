@@ -1,0 +1,6 @@
+{
+  "permissionMode": "acceptEdits",
+  "maxTurns": 60,
+  "cwd": "workspace",
+  "allowedTools": ["Read", "Glob", "Grep", "Bash(git:*)", "Bash(gh:*)", "Bash(npm:*)", "Bash(node:*)", "Bash(python3:*)", "Bash(pytest:*)"]
+}
